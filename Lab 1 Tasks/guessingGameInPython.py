@@ -1,9 +1,17 @@
-def interactive_dfs_guess(min_digit, max_digit, num_length):
+def interactive_dfs_guess():
+    # Take input for range and length from the user
+    min_digit = int(input("Enter the minimum digit (inclusive): "))
+    max_digit = int(input("Enter the maximum digit (inclusive): "))
+    num_length = int(input("Enter the length of the number to guess: "))
+    
     # Generate the list of numbers based on the range
     numbers = [str(i) for i in range(min_digit, max_digit + 1)]
     
-    # Function to simulate DFS and interact with the user
+    # DFS function to explore combinations and interact with the user
     def dfs(guess, depth):
+        # Print the current path/guess being explored
+        print(f"DFS exploring path: {guess}")
+        
         if depth == num_length:
             # Ask user if this guess is correct
             print(f"Is your number {guess}? (yes/no)")
@@ -13,8 +21,9 @@ def interactive_dfs_guess(min_digit, max_digit, num_length):
                 return True
             return False
         
+        # Try each number and go deeper
         for num in numbers:
-            if dfs(guess + num, depth + 1):
+            if dfs(guess + num, depth + 1):  # Recursive call to go deeper
                 return True
         return False
     
@@ -22,9 +31,5 @@ def interactive_dfs_guess(min_digit, max_digit, num_length):
     if not dfs("", 0):
         print("Couldn't guess the number.")
 
-# Example usage
-min_digit = 0  # Minimum digit (inclusive)
-max_digit = 9  # Maximum digit (inclusive)
-num_length = 3  # Length of the number to guess
-
-interactive_dfs_guess(min_digit, max_digit, num_length)
+# Start the guessing game
+interactive_dfs_guess()
