@@ -81,7 +81,7 @@ This project is open-source and available under the MIT License.
 
 ## Author
 
-Afnan Bin Abbas - [Your GitHub Profile](https://github.com/your-username)
+Afnan Bin Abbas - (https://github.com/AfnanBinAbbas)
 
 ---
 
