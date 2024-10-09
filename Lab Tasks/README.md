@@ -1,5 +1,3 @@
-Here is the updated README file with details about the **AI Version: Binary Search (Computer guesses player's number)** included:
-
 ---
 
 # Number Guessing Game with AI Search Algorithms
